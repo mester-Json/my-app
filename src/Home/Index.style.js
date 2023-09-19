@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Body from './wave-haikei.svg';
 
 export const StyledIndex = styled.body`
     width: auto;

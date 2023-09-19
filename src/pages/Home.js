@@ -5,15 +5,9 @@ import Index from '../Home/Index'
 function Home() {
   return (
     <div>
-      <div>
-        <Nav />
-      </div>
-      <div>
-        <Index />
-      </div>
-      <div>
-        <Footer />
-      </div>
+      <Nav />
+      <Index />
+      <Footer />
     </div>
   );
 }
