@@ -4,39 +4,44 @@ import Image from './liquid-cheese.svg';
 export const StyledNav = styled.nav`
   background-image: url(${Image});
   background-size: cover ;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-  color: white;
+  background-repeat: no-repeat ;
+  background-position: center ;
+  display: flex ;
+  justify-content: space-around ;
+  align-items: center ;
+  height: 100px ;
+  width: 100% ;
+  top: 0 ;
+  left: 0 ;
+  z-index: 1 ;
 `;
 
 export const StyledH1 = styled.h1`
-  font-size: 24px;
-  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 2px 2px 4px grey;
+
 `;
 
 
 export const StyledSearch = styled.input`
-  width: 200px; 
-  padding: 5px; 
-  color: white ;
-  border: none; 
-  background-color: #000;
-  opacity: 70% ;
-  border: 2px solid white ;
-  border-radius: 5px ;
-  margin-left: 20px; 
-  &::placeholder {
-    color: #ffff;
-    font-size: 15px;
-    text-align: center;
-  } 
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+  border: 2px solid black;
+  box-shadow: 2px 2px 4px grey;
+  &:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+  }
 `;
 
 export const StyledImg = styled.img`
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
 `;
 
 export default StyledNav;

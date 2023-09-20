@@ -3,18 +3,25 @@ import Image from './liquid-cheese.svg';
 
 export const StyledFooter = styled.footer`
   background-image: url(${Image});
-  background-size: cover;
-  display: block ;
-  height: 30px;
-  padding: 1rem;
-  width: auto;
+  background-size: cover ;
+  background-repeat: no-repeat ;
+  background-position: center ;
+  display: flex ;
+  justify-content: space-around ;
+  align-items: center ;
+  height: 100px ;
+  width: 100% ;
+  bottom: 0 ;
+  left: 0 ;
+  z-index: 1 ;
 `;
 
 export const StyledP = styled.p`
-    color: #ffff;
-    justify-content:center ;
-    margin-top: 5px;
-    display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 2px 2px 4px grey;
+  color: white;
 `;
 
 export default StyledFooter;
