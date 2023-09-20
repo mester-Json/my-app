@@ -14,6 +14,7 @@ import Img9 from './img/79bc1ab83c0eb782d2c3fe5de1088850.jpg';
 import Img10 from './img/817FOluzPFL._AC_SY550_.jpg';
 import Img11 from './img/minecraft-xbox-360-jaquette-e112948.jpg';
 import Img12 from './img/71aHh6YZOJL._AC_UF1000,1000_QL80_.jpg';
+import { ArrowsR, ArrowsG } from './CustomArrows'; // Importez vos flèches personnalisées
 
 
 function Index() {
@@ -27,8 +28,9 @@ function Index() {
         autoplay: true,
         autoplaySpeed: 10000,
         pauseOnHover: true,
+        prevArrow: <ArrowsG />, // Utilisez la flèche précédente personnalisée
+        nextArrow: <ArrowsR />, // Utilisez la flèche suivante personnalisée
     };
-
     return (
         <div>
             <StyledH1>
