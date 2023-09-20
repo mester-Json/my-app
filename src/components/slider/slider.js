@@ -1,4 +1,4 @@
-import { StyledSlider, StyledImage, StyledSliderContener, StyledH1 } from './slider.style'
+import { StyledSlider, StyledImage, StyledSliderContener, StyledH1, StyledButton } from './slider.style'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -25,8 +25,8 @@ function Index() {
                 Nos produits
             </StyledH1>
             <div>
-                <button>Console</button>
-                <button>Jeux</button>
+                <StyledButton>Console</StyledButton>
+                <StyledButton>Jeux</StyledButton>
             </div>
             <StyledSlider>
                 <Slider {...settings}>
@@ -34,11 +34,11 @@ function Index() {
                         <StyledSliderContener>
                             <StyledImage src={(Img)} alt="Image 1" />
                             <StyledImage src={(Img2)} alt="Image 2" />
+                            <StyledImage src={(Img3)} />
                         </StyledSliderContener>
                     </div>
                     <div>
                         <StyledSliderContener>
-                            <StyledImage src={(Img3)} />
                             <StyledImage src={(Img4)} />
                         </StyledSliderContener>
                     </div>
