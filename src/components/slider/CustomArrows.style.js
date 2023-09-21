@@ -10,7 +10,10 @@ export const StyledArrowsG = styled.div`
     background-color: transparent; 
     border: none; 
     color: white; 
-    font-size: 24px; 
+    font-size: 24px;
+    ::selection {
+        background-color: transparent;
+    } 
 `
 
 export const StyledArrowsR = styled.div`
@@ -24,6 +27,9 @@ export const StyledArrowsR = styled.div`
     border: none; 
     color: white; 
     font-size: 24px; 
+    ::selection {
+        background-color: transparent;
+    }
     `
 
 export default StyledArrowsG;

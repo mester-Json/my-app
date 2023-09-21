@@ -1,4 +1,4 @@
-import { StyledSlider, StyledImage, StyledSliderContener, StyledH1, StyledButton } from './slider.style'
+import { StyledSlider, StyledImage, StyledSliderContener, } from './slider.style'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -33,13 +33,6 @@ function Index() {
     };
     return (
         <div>
-            <StyledH1>
-                Nos Nouvelles Rentrer
-            </StyledH1>
-            <div>
-                <StyledButton>Console</StyledButton>
-                <StyledButton>Jeux</StyledButton>
-            </div>
             <StyledSlider>
                 <Slider {...settings}>
                     <div>

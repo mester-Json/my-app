@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Image from './liquid-cheese.svg';
+import Image from './symbol-scatter-haikei.svg';
 
 export const StyledFooter = styled.footer`
   background-image: url(${Image});
