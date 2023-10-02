@@ -16,9 +16,10 @@ function Index() {
             <StyledH2>
                 Nos Produits Rare
             </StyledH2>
-            <StyledH3>
-                Nos Console
-            </StyledH3>
+            <a href='http://localhost:3000/Console' style={{ textDecoration: 'none' }} >
+                <StyledH3>
+                    Nos Console
+                </StyledH3></a>
             <Box />
         </div>
     )

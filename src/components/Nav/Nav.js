@@ -1,5 +1,6 @@
-import { StyledNav, StyledH1, StyledSearch, StyledImg } from './Nav.style'
-import Img from './Le revendeur-Logo.png'
+import { StyledNav, StyledH1, StyledSearch, StyledImg, StyledFontAwesomeIcon } from './Nav.style'
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import Img from './Lerevendeur.png'
 
 function Nav() {
     return (
@@ -9,6 +10,7 @@ function Nav() {
                 Le revendeur
             </StyledH1>
             <StyledSearch type="text" placeholder="Rechercher un produit" />
+            <StyledFontAwesomeIcon icon={faUser} />
         </StyledNav>
     );
 }

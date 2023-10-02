@@ -10,10 +10,14 @@ export const StyledDiv = styled.div`
     display: grid; 
     grid-template-columns: repeat(3, 1fr); 
     gap: 10px;
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 2px 2px 4px grey;
+
 `;
 
 export const StyledImg = styled.img`
-    width: 100px ;
+    width: 100px ; 
     height: 100px ;
     margin-left: 100px ;
     margin-top: 50px ;

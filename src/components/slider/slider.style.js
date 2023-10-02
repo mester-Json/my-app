@@ -43,7 +43,7 @@ export const StyledImage = styled.img`
     box-shadow: 2px 2px 4px grey;
     &:hover {
         transform: scale(1.2);
-        transition: 0.5s;
+        transition: 0.5s;z
         cursor: pointer;
     }
 `;

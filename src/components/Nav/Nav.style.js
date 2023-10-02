@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import Image from './symbol-scatter-haikei.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const StyledNav = styled.nav`
   background-image: url(${Image});
   background-size: cover ;
   background-position: center ;
   display: flex ;
-  justify-content: space-around ;
   align-items: center ;
   height: auto ;
   width: 100% ;
@@ -22,6 +22,7 @@ export const StyledH1 = styled.h1`
   font-family: 'Roboto', sans-serif;
   text-shadow: 2px 2px 4px grey;
   text-align: center;
+  margin-left: 550px ;
   margin-top: 20px;
   margin-bottom: 20px;
 `;
@@ -34,6 +35,7 @@ export const StyledSearch = styled.input`
   border: 2px solid black;
   box-shadow: 2px 2px 4px grey;
   margin-top: 10px;
+  margin-left: 400px ;
   margin-bottom: 10px;
   text-align: center;
   font-size: 15px;
@@ -47,9 +49,13 @@ export const StyledSearch = styled.input`
 export const StyledImg = styled.img`
   width: 100px;
   height: 100px;
-  border: 1px  solid black ;
-  border-radius: 50%;
-  background: grey ;
+  margin-left: 200px ;
 `;
+
+export const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
+    color: white ;
+    margin-left: 90px ;
+    font-size: 50px ;
+`
 
 export default StyledNav;

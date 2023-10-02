@@ -8,14 +8,16 @@ import Img6 from './img/images.jpeg'
 
 const Box = () => {
     return (
-        <StyledDiv>
-            <StyledImg src={Img1} alt="Smash" />
-            <StyledImg src={Img2} alt='' />
-            <StyledImg src={Img3} alt='' />
-            <StyledImg src={Img4} alt='' />
-            <StyledImg src={Img5} alt='' />
-            <StyledImg src={Img6} alt='' />
-        </StyledDiv>
+        <div>
+            <StyledDiv>
+                <StyledImg src={Img1} alt="" />
+                <StyledImg src={Img2} alt='' />
+                <StyledImg src={Img3} alt='' />
+                <StyledImg src={Img4} alt='' />
+                <StyledImg src={Img5} alt='' />
+                <StyledImg src={Img6} alt='' />
+            </StyledDiv>
+        </div>
     );
 };
 
