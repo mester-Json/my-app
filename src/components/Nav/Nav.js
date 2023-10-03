@@ -10,7 +10,7 @@ function Nav() {
                 Le revendeur
             </StyledH1>
             <StyledSearch type="text" placeholder="Rechercher un produit" />
-            <StyledFontAwesomeIcon icon={faUser} />
+            <a href='http://localhost:3000/profile' ><StyledFontAwesomeIcon icon={faUser} /></a>
         </StyledNav>
     );
 }
