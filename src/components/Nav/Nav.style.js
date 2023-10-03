@@ -16,13 +16,13 @@ export const StyledNav = styled.nav`
 `;
 
 export const StyledH1 = styled.h1`
-  font-size: 30px;
+  font-size: 40px;
   color: white ;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
   text-shadow: 2px 2px 4px grey;
   text-align: center;
-  margin-left: 550px ;
+  margin-left: 500px ;
   margin-top: 20px;
   margin-bottom: 20px;
 `;
@@ -35,7 +35,7 @@ export const StyledSearch = styled.input`
   border: 2px solid black;
   box-shadow: 2px 2px 4px grey;
   margin-top: 10px;
-  margin-left: 400px ;
+  margin-left: 380px ;
   margin-bottom: 10px;
   text-align: center;
   font-size: 15px;
@@ -49,12 +49,15 @@ export const StyledSearch = styled.input`
 export const StyledImg = styled.img`
   width: 100px;
   height: 100px;
-  margin-left: 200px ;
+  margin-top: 35px ;
+  margin-left: 120px ;
+  background-color: #001829  ;
 `;
 
 export const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
     color: white ;
-    margin-left: 90px ;
+    margin-left: 50px ;
+    margin-right: 25px;
     font-size: 50px ;
 `
 

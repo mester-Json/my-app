@@ -1,5 +1,6 @@
 import { StyledNav, StyledH1, StyledSearch, StyledImg, StyledFontAwesomeIcon } from './Nav.style'
 import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 import Img from './Lerevendeur.png'
 
 function Nav() {
@@ -11,6 +12,7 @@ function Nav() {
             </StyledH1>
             <StyledSearch type="text" placeholder="Rechercher un produit" />
             <a href='http://localhost:3000/profile' ><StyledFontAwesomeIcon icon={faUser} /></a>
+            <a href='http://localhost:3000/profile' ><StyledFontAwesomeIcon icon={faCartPlus} /></a>
         </StyledNav>
     );
 }

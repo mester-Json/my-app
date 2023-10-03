@@ -1,19 +1,5 @@
 import styled from "styled-components";
 
-export const Stylediv = styled.div`
-    background-color: #10314c;
-    color: white ;
-    margin-top: 5% ;
-    margin-bottom: 10% ;
-    margin-left: 10% ;
-    text-align: center ;
-    border: 2px solid black ;
-    border-radius: 30px ;
-    width: 1550px ;
-    height : 750px ;
-    display: block ;
-`
-
 export const Styleh2 = styled.h2`
     font-size: 40px;
     color: black ;
@@ -24,21 +10,36 @@ export const Styleh2 = styled.h2`
     margin-top: 50px;
 `
 
+export const Stylediv = styled.div`
+    background-color: #10314c;
+    color: white ;
+    margin-top: 5% ;
+    margin-bottom: 10% ;
+    margin-left: 10% ;
+    text-align: center ;
+    display: block ;
+    border: 2px solid black ;
+    border-radius: 30px ;
+    width: 1550px ;
+    height : 750px ;
+    box-shadow: 2px 2px 2px #969696 ;
+`
+
 export const Styledivcontent = styled.div`
     background-color: #041829;
-    margin-top: 5% ;
+    margin-top: 30px ;
     margin-left: 10% ; 
-    gap: 10px;
-    padding: 10px;
+    text-align: center ;
     border: 2px solid black ;
     border-radius: 30px ;
     width: 1250px ;
     height : 600px ;
+
 `
 
 export const StyledImg = styled.img`
-    width: 100px ; 
-    height: 100px ;
+    width: 250px ; 
+    height: 200px ;
     margin-left: 100px ;
     margin-top: 50px ;
     margin-bottom: 50px ;
@@ -50,11 +51,33 @@ export const StyledImg = styled.img`
     }`
 
 export const StyledButton = styled.button`
-        border: 2px solid black ;
-        margin-top: 350px ;
-        margin-right: 10px ;
+        border: 3px solid black ;
+        border-radius: 30px ;
+        margin-top: 15px ;
+        margin-left: 15px ;
+        color: #10314c ;
+        background-color:;
+        width: 120px ;
+        height : 30px ;
         cursor:  crosshair ;
-
+    &:hover {
+        background-color: #fcaf3c ;
+        color: black ;
+    }
 `
+
+export const StyledLabel = styled.label`
+    margin-right:10px ;
+`
+export const StyledSelect = styled.select`
+        border: 3px solid black ;
+        border-radius: 30px ;
+        margin-top: 10px ;
+        margin-right:1250px ;
+        text-align: center  ;
+        font-size : 12px ;
+        color: #10314c ;
+        width: 120px ;
+        height : 30px ;`
 
 export default Stylediv;

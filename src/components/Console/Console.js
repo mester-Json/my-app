@@ -1,42 +1,6 @@
-import { Stylediv, Styleh2, Styledivcontent, StyledImg, StyledButton } from './Console.style';
+import { Stylediv, Styleh2, Styledivcontent, StyledImg, StyledButton, StyledLabel, StyledSelect } from './Console.style';
 import React, { Component } from 'react';
-import Img1 from './img/Jeux-Video-et-Consoles_Consoles-f1-XBOX.jpg'
-import Img2 from './img/xbox-360_0900895485.jpg'
-import Img3 from './img/istockphoto-472044719-612x612.jpg'
-import Img4 from './img/Ps5-standard-edition.jpg'
-import Img5 from './img/console-ps3-fat-e126192.jpg'
-import Img6 from './img/images.jpeg'
-import Img7 from './img/images2.jpeg'
-import Img8 from './img/FX2HTD2igDw5Q6MWkbD3YP-415-80.jpg'
-import Img9 from './img/nintendo-switch-edition-mario-rouge-et-bleu.jpg'
-import Img10 from './img/nintendo-switch_7949a77b3fd2c1f6__1200_900__overflow.jpg'
-import Img11 from './img/9-10.jpg'
-import Img12 from './img/9-10.jpg'
-import Img13 from './img/9-10.jpg'
-import Img14 from './img/9-10.jpg'
-import Img15 from './img/9-10.jpg'
-import Img16 from './img/9-10.jpg'
-import Img17 from './img/9-10.jpg'
 
-const images = [
-    Img1,
-    Img2,
-    Img3,
-    Img4,
-    Img5,
-    Img6,
-    Img7,
-    Img8,
-    Img9,
-    Img10,
-    Img11,
-    Img12,
-    Img13,
-    Img14,
-    Img15,
-    Img16,
-    Img17
-];
 
 class Index extends Component {
     constructor(props) {
@@ -52,33 +16,84 @@ class Index extends Component {
         this.setState({ currentPage: page });
     };
 
+    // Fonction pour changer le filtre
+    changeFilter = (filter) => {
+        this.setState({ filter: filter });
+    };
+
+    // Fonction de tri pour les images
+    sortImages = (images, filter) => {
+        switch (filter) {
+            case 'recent':
+                return images.slice().reverse(); // Tri par récence (ordre inverse)
+            case 'ancien':
+                return images.slice(); // Tri par ancien (ordre d'origine)
+            case 'prix-croissant':
+                return images.slice().sort((a, b) => a - b); // Tri par prix croissant
+            case 'prix-decroissant':
+                return images.slice().sort((a, b) => b - a); // Tri par prix décroissant
+            case 'marque':
+                return images.slice(); // Tri par marque (à personnaliser)
+            case 'disponible':
+                return images.slice(); // Tri par disponibilité (à personnaliser)
+            default:
+                return images;
+        };
+    }
+    getImages = () => {
+        const images = require.context('./img', false, /\.(jpg|jpeg|png|gif|webp)$/);
+        const imageKeys = images.keys();
+        return imageKeys.map(images);
+    };
+
+
     render() {
-        const { currentPage } = this.state;
+        const { currentPage, filter } = this.state;
         const itemsPerPage = 5;
         const startIndex = (currentPage - 1) * itemsPerPage;
         const endIndex = startIndex + itemsPerPage;
-        const displayedImages = images.slice(startIndex, endIndex);
+        const imageUrls = this.getImages();
+
+        const sortedImages = this.sortImages(imageUrls, filter);
+        const displayedImages = sortedImages.slice(startIndex, endIndex);
+
+        const totalPages = Math.ceil(imageUrls.length / itemsPerPage);
+
+        const paginationButtons = [];
+        for (let page = 1; page <= totalPages; page++) {
+            paginationButtons.push(
+                <StyledButton
+                    key={page}
+                    onClick={() => this.changePage(page)}
+                    disabled={page === currentPage}
+                >
+                    Page {page}
+                </StyledButton>
+            );
+        }
 
         return (
             <div>
                 <Styleh2>Nos Consoles</Styleh2>
                 <Stylediv>
+                    <StyledLabel>Filtrer par : </StyledLabel>
+                    <StyledSelect onChange={(e) => this.changeFilter(e.target.value)} value={filter}>
+                        <option value="recent">Récence</option>
+                        <option value="ancien">Ancienneté</option>
+                        <option value="prix-croissant">Prix Croissant</option>
+                        <option value="prix-decroissant">Prix Décroissant</option>
+                        <option value="marque">Marque</option>
+                        <option value="disponible">Disponible</option>
+                        {/* Ajoutez d'autres options de filtrage ici */}
+                    </StyledSelect>
                     <Styledivcontent>
                         {displayedImages.map((image, index) => (
                             <StyledImg key={index} src={image} alt="" />
                         ))}
-                        <div>
-                            {[1, 2, 3].map((page) => (
-                                <StyledButton
-                                    key={page}
-                                    onClick={() => this.changePage(page)}
-                                    disabled={page === currentPage}
-                                >
-                                    Page {page}
-                                </StyledButton>
-                            ))}
-                        </div>
                     </Styledivcontent>
+                    <div>
+                        {paginationButtons}
+                    </div>
                 </Stylediv>
             </div>
         );
