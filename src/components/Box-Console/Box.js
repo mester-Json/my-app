@@ -1,21 +1,33 @@
-import { StyledDiv, StyledImg } from './Box.style'
-import Img1 from './img/Jeux-Video-et-Consoles_Consoles-f1-XBOX.jpg'
-import Img2 from './img/xbox-360_0900895485.jpg'
-import Img3 from './img/istockphoto-472044719-612x612.jpg'
-import Img4 from './img/Ps5-standard-edition.jpg'
-import Img5 from './img/console-ps3-fat-e126192.jpg'
-import Img6 from './img/images.jpeg'
+import { StyledDiv, StyledImg } from './Box.style';
+import React, { useState, useEffect } from 'react';
+
+const images = [
+    { src: require('../Console/img/PSP-3000-Silver.jpg'), date: new Date('2023-01-01') },
+    { src: require('../Console/img/xbox-one-fate.jpg'), date: new Date('2023-09-30') },
+    { src: require('../Console/img/wii-slime-Nintendo-Mario-Kart-Wii.jpg'), date: new Date('2023-09-29') },
+    { src: require('../Console/img/ps4-pro.jpeg'), date: new Date('2023-09-28') },
+    { src: require('../Console/img/new-3ds-xl-edition-snes.jpg'), date: new Date('2023-09-27') },
+    { src: require('../Console/img/xbox-360.jpg'), date: new Date('2023-09-26') },
+];
 
 const Box = () => {
+    const [recentImages, setRecentImages] = useState([]);
+
+    useEffect(() => {
+
+        const sortedImages = images.sort((a, b) => b.date - a.date);
+
+        const top6Images = sortedImages.slice(0, 6);
+
+        setRecentImages(top6Images);
+    }, []);
+
     return (
         <div>
             <StyledDiv>
-                <StyledImg src={Img1} alt="" />
-                <StyledImg src={Img2} alt='' />
-                <StyledImg src={Img3} alt='' />
-                <StyledImg src={Img4} alt='' />
-                <StyledImg src={Img5} alt='' />
-                <StyledImg src={Img6} alt='' />
+                {recentImages.map((image, index) => (
+                    <StyledImg key={index} src={image.src} alt="" />
+                ))}
             </StyledDiv>
         </div>
     );

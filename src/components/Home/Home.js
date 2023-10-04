@@ -1,5 +1,5 @@
 import { StyledH1, StyledButton, StyledH2, StyledH3 } from './Home.style';
-import Slider from '../slider/slider'
+import Slider from '../Slider/slider'
 import Box from '../Box-Console/Box'
 
 function Index() {
@@ -10,17 +10,17 @@ function Index() {
                 <StyledButton>Jeux</StyledButton>
             </div>
             <StyledH1>
-                Nos Nouvelles Rentrer
+                Nos Jeux Vidéo
             </StyledH1>
             <Slider />
-            <StyledH2>
-                Nos Produits Rare
-            </StyledH2>
             <a href='http://localhost:3000/Console' style={{ textDecoration: 'none' }} >
                 <StyledH3>
                     Nos Console
                 </StyledH3></a>
             <Box />
+            <StyledH2>
+                Nos Produits Retro
+            </StyledH2>
         </div>
     )
 }

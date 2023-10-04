@@ -5,7 +5,7 @@ function Footer() {
         <div>
             <StyledFooter>
                 <StyledP>
-                    Le-revendeur-©-2021
+                    Le-revendeur-©-2023
                 </StyledP>
             </StyledFooter>
         </div>

@@ -47,9 +47,9 @@ export const StyledSearch = styled.input`
 `;
 
 export const StyledImg = styled.img`
-  width: 100px;
-  height: 100px;
-  margin-top: 35px ;
+  width: 150px;
+  height: 150px;
+  margin-top: 20px ;
   margin-left: 120px ;
   background-color: #001829  ;
 `;

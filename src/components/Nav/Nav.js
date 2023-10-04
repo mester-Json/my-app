@@ -6,13 +6,13 @@ import Img from './Lerevendeur.png'
 function Nav() {
     return (
         <StyledNav>
-            <StyledImg src={(Img)} />
+            <a href='http://localhost:3000/' ><StyledImg src={(Img)} /></a>
             <StyledH1>
                 Le revendeur
             </StyledH1>
             <StyledSearch type="text" placeholder="Rechercher un produit" />
             <a href='http://localhost:3000/profile' ><StyledFontAwesomeIcon icon={faUser} /></a>
-            <a href='http://localhost:3000/profile' ><StyledFontAwesomeIcon icon={faCartPlus} /></a>
+            <a href='http://localhost:3000/panier' ><StyledFontAwesomeIcon icon={faCartPlus} /></a>
         </StyledNav>
     );
 }

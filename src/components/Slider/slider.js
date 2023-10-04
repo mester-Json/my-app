@@ -16,8 +16,8 @@ import Img11 from './img/minecraft-xbox-360-jaquette-e112948.jpg';
 import Img12 from './img/71aHh6YZOJL._AC_UF1000,1000_QL80_.jpg';
 import { ArrowsR, ArrowsG } from './CustomArrows';
 
-
 function Index() {
+
     const settings = {
         dots: true,
         infinite: true,
@@ -31,6 +31,7 @@ function Index() {
         prevArrow: <ArrowsG />,
         nextArrow: <ArrowsR />,
     };
+
     return (
         <div>
             <StyledSlider>
