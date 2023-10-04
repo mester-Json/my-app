@@ -13,6 +13,7 @@
 **/public
 
 # misc
+.gitignore
 .DS_Store
 .env.local
 .env.development.local
