@@ -39,11 +39,12 @@ export const Styledivcontent = styled.div`
 
 export const StyledImg = styled.img`
     width: 200px ; 
-    height: 250px ;
+    height: auto ;
     margin-left: 100px ;
     margin-top: 50px ;
     margin-bottom: 50px ;
     border: 2px solid black ;
+    border-radius: 20px ;
     &:hover {
         transform: scale(1.2);
         transition: 0.5s;
@@ -56,7 +57,6 @@ export const StyledButton = styled.button`
         margin-top: 15px ;
         margin-left: 15px ;
         color: #10314c ;
-        background-color:;
         width: 120px ;
         height : 30px ;
         cursor:  crosshair ;

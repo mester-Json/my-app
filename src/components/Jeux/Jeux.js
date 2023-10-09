@@ -71,7 +71,7 @@ class Jeux extends Component {
 
         return (
             <div>
-                <Styleh2>Nos Consoles</Styleh2>
+                <Styleh2>Nos Jeux Vidéo</Styleh2>
                 <Stylediv>
                     <StyledLabel>Filtrer par : </StyledLabel>
                     <StyledSelect onChange={(e) => this.changeFilter(e.target.value)} value={filter}>

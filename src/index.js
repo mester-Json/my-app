@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { StrictMode } from 'react';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -24,4 +25,9 @@ function App() {
   );
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);
