@@ -1,6 +1,6 @@
 import Nav from '../components/Nav/Nav';
 import Footer from '../components/Footer/Footer';
-import Profile from '../components/Profie/Profile'
+import Profile from '../components/Profile/Profile'
 
 
 function PageProfile() {
