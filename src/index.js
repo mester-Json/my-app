@@ -4,10 +4,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Index from './pages/Accueille'
-import Console from './pages/Console';
+import Console from './pages/Console'
 import Profile from './pages/Profile'
+import NewProfile from './pages/New-Profile'
 import Panier from './pages/Panier'
-import Retro from './pages/Retro';
+import Retro from './pages/Retro'
 import Jeux from './pages/Jeux'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path='/Console' element={<Console />} />
         <Route path='/Jeux' element={<Jeux />} />
         <Route path='/Profile' element={<Profile />} />
+        <Route path='/NewProfile' element={<NewProfile />} />
         <Route path='/Panier' element={<Panier />} />
         <Route path='/Retro' element={<Retro />} />
       </Routes>
