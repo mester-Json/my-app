@@ -13,7 +13,7 @@ function Profile() {
     const [password, setPassword] = useState("");
 
     const handleLogin = () => {
-        console.log("Tentative de connexion avec le nom d'utilisateur : ", username);
+
     };
 
     return (

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import axios from "axios";
+
 import {
     StyleForm,
-    StyleH2,
     StyleButton,
     StyleLabel,
     StyleSubmit,
@@ -9,35 +10,55 @@ import {
 } from "./Profile.style";
 
 function Profile() {
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
+    const [user, setuser] = useState("");
+    const [password, setpassword] = useState("");
 
-    const handleLogin = () => {
-        console.log("Tentative de connexion avec le nom d'utilisateur : ", username);
+    const handleLogin = async () => {
+        try {
+            if (!user || !password) {
+                alert("Veuillez remplir tous les champs.");
+                return;
+            }
+            await axios({
+                method: "post",
+                url: "http://localhost:3000/revendeur/user",
+                data: { user, password },
+                withCredentials: true,
+
+            });
+            window.location.href = "http://localhost:3000/";
+        } catch (err) {
+
+
+        };
     };
+
 
     return (
         <div>
-            <StyleH2>Connexion</StyleH2>
             <StyleForm>
-                <StyleLabel>Nom d'utilisateur:</StyleLabel>
+                <StyleLabel>Nom d'utilisateur ou Mail :</StyleLabel>
                 <StyleButton
                     type="text"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                    placeholder="Votre Nom "
+                    value={user}
+                    onChange={(e) => setuser(e.target.value)}
+                    placeholder="Votre Nom ou Mail"
                 />
-                <StyleLabel>Mot de passe:</StyleLabel>
+                <StyleLabel>Mot de passe :</StyleLabel>
                 <StyleButton
                     type="password"
                     value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    onChange={(e) => setpassword(e.target.value)}
                     placeholder="Mon Mot De Passe"
                 />
+
                 <StyleSubmit type="button" onClick={handleLogin}>
                     Se connecter
                 </StyleSubmit>
-                <StyleText href="http://localhost:3000/" > <p> Crée Mon Profile  </p></StyleText>
+
+                <StyleText href="http://localhost:3000/NewProfile">
+                    <p> Crée Mon Profile  </p>
+                </StyleText>
             </StyleForm>
         </div>
     );

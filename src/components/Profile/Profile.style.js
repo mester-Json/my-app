@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const StyleForm = styled.form`
     width: 750px;
-    height: 450px ;
+    height: 543px ;
     background-color: #001829 ;
     border: 2px solid black  ;
     margin-top: 104px ;
@@ -15,16 +15,17 @@ export const StyleForm = styled.form`
     flex-direction: column ;
 `
 
-export const StyleH2 = styled.h2`
-    text-align: center ;
-    font-size: 35px;
-    color: black ;
-    font-weight: bold;
-    font-family: 'Roboto', sans-serif;
-    text-shadow: 2px 2px 4px grey;
-    text-align: center;
-    margin-top: 50px;
-`
+// export const StyleH2 = styled.h2`
+//     text-align: center ;
+//     font-size: 35px;
+//     color: black ;
+//     font-weight: bold;
+//     font-family: 'Roboto', sans-serif;
+//     text-shadow: 2px 2px 4px grey;
+//     text-align: center;
+//     margin-top: 50px;
+// `
+
 export const StyleButton = styled.input`
     background-color : white ;
     width: 300px ;
@@ -38,14 +39,14 @@ export const StyleButton = styled.input`
     border: 2px solid black ;
     &::placeholder {
         color: black ;
-        font-size: 25px ;
+        font-size: 20px ;
     }
 `
 export const StyleSubmit = styled.button`
     background-color : white ;
-    width: 150px ;
+    width: 180px ;
     height: 25px;
-    font-size: 20px ;
+    font-size: 18px ;
     margin-top : 50px ;
     margin-left: 165px ;
     text-align: center ;
@@ -55,7 +56,7 @@ export const StyleSubmit = styled.button`
 `
 
 export const StyleLabel = styled.label`
-    font-size: 18px ;
+    font-size: 25px ;
     margin-left: 10px;
     margin-top: 70px ;
     color: white ;                              

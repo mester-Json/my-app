@@ -44,7 +44,7 @@ export const StyledImg = styled.img`
     margin-top: 50px ;
     margin-bottom: 50px ;
     border: 2px solid black ;
-    border-radius: 20px ;
+    border-radius: 4% ;
     &:hover {
         transform: scale(1.2);
         transition: 0.5s;

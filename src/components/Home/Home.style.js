@@ -38,6 +38,7 @@ export const StyledH2 = styled.h2`
     font-family: 'Roboto', sans-serif;
     text-shadow: 2px 2px 4px grey;
     text-align: center;
+    margin-top: 50px;
     `
 export const StyledH3 = styled.h3`
     font-size: 30px;
