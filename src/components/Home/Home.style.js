@@ -1,17 +1,18 @@
 import styled from "styled-components";
 
-export const StyledH1 = styled.h1`
+export const StyleH1 = styled.h1`
     font-size: 30px;
     color: black ;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
     text-shadow: 2px 2px 4px grey;
+    block-size: 0;
     text-align: center;
     margin-top: 20px;  
     margin-bottom: 20px;
 `;
 
-export const StyledButton = styled.button`
+export const StyleButton = styled.button`
     width: 100px;
     height: 50px;
     background-color:#10314c;
@@ -31,22 +32,24 @@ export const StyledButton = styled.button`
     }
 `;
 
-export const StyledH2 = styled.h2`
+export const StyleH2 = styled.h2`
     font-size: 30px;
     color: black ;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
     text-shadow: 2px 2px 4px grey;
+    block-size: 0;
     text-align: center;
     margin-top: 50px;
     `
-export const StyledH3 = styled.h3`
+export const StyleH3 = styled.h3`
     font-size: 30px;
     color: black ;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
     text-shadow: 2px 2px 4px grey;
+    block-size: 0;
     text-align: center;
     margin-top: 50px;
     `
-export default StyledH1;
+export default StyleH1;

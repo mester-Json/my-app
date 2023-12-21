@@ -15,7 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Index />} />
+        <Route path="/my-app" element={<Index />} />
         <Route path='/Console' element={<Console />} />
         <Route path='/Jeux' element={<Jeux />} />
         <Route path='/Profile' element={<Profile />} />

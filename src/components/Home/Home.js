@@ -1,4 +1,4 @@
-import { StyledH1, StyledButton, StyledH2, StyledH3 } from './Home.style';
+import { StyleH1, StyleButton, StyleH2, StyleH3 } from './Home.style';
 import Slider from '../Slider/slider'
 import Box from '../Box/BoxConsole'
 import BoxRetro from '../Box/BoxRetro.js'
@@ -7,24 +7,24 @@ function Index() {
     return (
         <div>
             <div>
-                <a href='http://localhost:3000/Console'><StyledButton>Console</StyledButton></a>
-                <a href='http://localhost:3000/jeux' ><StyledButton>Jeux</StyledButton></a>
+                <a href='http://localhost:3000/Console'><StyleButton>Console</StyleButton></a>
+                <a href='http://localhost:3000/jeux' ><StyleButton>Jeux</StyleButton></a>
             </div>
-            <a href='http://localhost:3000/jeux' style={{ textDecoration: 'none' }} > <StyledH1>
+            <a href='http://localhost:3000/jeux' style={{ textDecoration: 'none' }} > <StyleH1>
                 Nos Jeux Vidéo
-            </StyledH1>
+            </StyleH1>
             </a>
             <Slider />
             <a href='http://localhost:3000/Console' style={{ textDecoration: 'none' }} >
-                <StyledH3>
+                <StyleH3>
                     Nos Console
-                </StyledH3>
+                </StyleH3>
             </a>
             <Box />
             <a href='http://localhost:3000/Retro' style={{ textDecoration: 'none' }} >
-                <StyledH2>
+                <StyleH2>
                     Nos Produits Retro
-                </StyledH2>
+                </StyleH2>
             </a>
             <BoxRetro />
         </div>

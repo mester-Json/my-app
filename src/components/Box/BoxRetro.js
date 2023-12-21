@@ -1,4 +1,3 @@
-
 import { StyledDiv, StyledImg } from './Box.style';
 import React, { useState, useEffect } from 'react';
 

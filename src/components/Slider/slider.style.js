@@ -10,7 +10,7 @@ export const StyledSlider = styled.div`
     width: 70%;
     height: 500px;
     margin: 0 auto;
-    margin-top: 0px;
+    margin-top: 100px;
     margin-bottom: 50px;
     background-color: #10314c ;
     border-radius: 30px;
