@@ -1,7 +1,7 @@
 import { StyleH1, StyleButton, StyleH2, StyleH3 } from './Home.style';
-import Slider from '../Slider/slider'
-import Box from '../Box/BoxConsole'
-import BoxRetro from '../Box/BoxRetro.js'
+import Slider from '../SliderJeux/sliderjeux.js'
+import SliderConsole from '../SliderConsole/sliderconsole.js'
+import SliderRetro from '../SliderRetro/sliderretro.js'
 
 function Index() {
     return (
@@ -20,13 +20,13 @@ function Index() {
                     Nos Console
                 </StyleH3>
             </a>
-            <Box />
+            <SliderConsole />
             <a href='http://localhost:3000/Retro' style={{ textDecoration: 'none' }} >
                 <StyleH2>
                     Nos Produits Retro
                 </StyleH2>
             </a>
-            <BoxRetro />
+            <SliderRetro />
         </div>
     )
 }
